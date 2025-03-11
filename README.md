@@ -18,7 +18,7 @@
   👯 I’m looking to collaborate on any Project, so feel free to reach me!<br>
   💬 Ask me about anything! I'll be happy to reply >//<<br>
   📫 How to reach me: <a href="mailto:pujiartisusi@gmail.com">pujiartisusi@gmail.com</a><br>
-  ⚡ Fun fact: I have done nothing productiveall day..</p>
+  ⚡ Fun fact: I have done nothing productive all day..</p>
 </p>
 <!-- garis -->
 <img align="center" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="javascript" width="1000"/>
