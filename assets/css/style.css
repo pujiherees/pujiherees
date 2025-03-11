@@ -1,0 +1,305 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+   * colors
+   */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(45, 15%, 90%) 3%, 
+    hsl(45, 15%, 85%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(45, 15%, 85%, 0.251) 0%, 
+    hsla(45, 15%, 80%, 0) 100%
+  ), hsl(60, 8%, 15%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(45, 15%, 85%) 0%, 
+    hsla(45, 15%, 85%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    hsl(45, 30%, 75%), 
+    hsl(45, 30%, 70%)
+  );
+
+  /* solid colors */
+  --jet: hsl(45, 15%, 75%); /* Beige soft gelap */
+  --onyx: hsl(45, 15%, 70%); /* Beige soft lebih gelap */
+  --eerie-black-1: hsl(45, 15%, 65%); /* Beige soft sedang */
+  --eerie-black-2: hsl(45, 15%, 60%); /* Beige soft lebih gelap */
+  --smoky-black: hsl(45, 15%, 55%); /* Beige soft sangat gelap */
+  --white-1: hsl(45, 15%, 95%); /* Beige soft sangat terang */
+  --white-2: hsl(45, 15%, 90%); /* Beige soft terang */
+  --orange-yellow-crayola: hsl(45, 30%, 75%); /* Beige soft kekuningan */
+  --light-gray: hsl(45, 15%, 85%); /* Beige soft muda */
+  --light-gray-70: hsla(45, 15%, 85%, 0.7); /* Beige soft muda dengan transparansi */
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+img, ion-icon, a, button, time, span { display: block; }
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+::selection {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+}
+
+:focus { outline-color: var(--orange-yellow-crayola); }
+
+html { font-family: var(--ff-poppins); }
+
+body { background: var(--smoky-black); }
+
+/*-----------------------------------*\
+  #MAIN LAYOUT
+\*-----------------------------------*/
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px; /* Profil 250px, About fleksibel, Contact 250px */
+  gap: 20px; /* Jarak antara kolom */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*-----------------------------------*\
+  #SIDEBAR (PROFIL)
+\*-----------------------------------*/
+
+.sidebar {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: var(--shadow-1);
+}
+
+.sidebar-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar-box {
+  background: var(--bg-gradient-onyx);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.avatar-box img {
+  border-radius: 10%; 
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+}
+
+
+.info-content .name {
+  color: var(--white-2);
+  font-size: var(--fs-3);
+  font-weight: var(--fw-500);
+  text-align: center;
+}
+
+.info-content .title {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  padding: 3px 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contacts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-box {
+  background: var(--border-gradient-onyx);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-1);
+}
+
+.contact-title {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contact-link, time, address {
+  color: var(--white-2);
+  font-size: var(--fs-7);
+}
+
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: var(--shadow-1);
+}
+
+.article-title {
+  position: relative;
+  padding-bottom: 7px;
+  color: var(--white-2);
+  font-size: 1.2rem;
+  font-weight: var(--fw-600);
+}
+
+.article-title::after {
+display: none;
+}
+
+.about-text {
+  color: var(--light-gray);
+  font-size: 1.1rem;
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.about-text p { margin-bottom: 20px; }
+
+/*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
+
+.contact {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: var(--shadow-1);
+}
+
+.contact-form {
+  color: var(--light-gray);
+  font-size: 1.1rem;
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.form-input {
+  color: var(--white-2);
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+  padding: 15px 20px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.form-input::placeholder { font-weight: var(--fw-500); }
+
+.form-input:focus { border-color: var(--orange-yellow-crayola); }
+
+textarea.form-input {
+  min-height: 150px;
+  height: 120px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+.form-btn {
+  position: relative;
+  width: 100%;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border-radius: 14px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.form-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.form-btn:hover { background: var(--bg-gradient-yellow-1); }
+
+.form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+
+/*-----------------------------------*\
+  #RESPONSIVE
+\*-----------------------------------*/
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Semua kolom ditumpuk */
+  }
+
+  .sidebar, .about, .contact {
+    width: 100%; /* Lebar penuh */
+  }
+}
